@@ -12,11 +12,10 @@ function prompt_char {
     echo "└╼%{$reset_color%}"
 }
 function close_git {
-    git branch >/dev/null 2>/dev/null && echo "│"
+    echo "│"
 }
 function open_git {
     git branch >/dev/null 2>/dev/null && echo "├─┤" && return
-    echo "│"
 }
 
 PROMPT='

@@ -27,7 +27,8 @@ function prompt_char {
     echo "└─┴─┤%{$reset_color%}"
 }
 function close_git {
-    echo "│"
+    echo -n "%{$ZEPHYR_PRE%}"
+    echo "│%{$reset_color%}"
 }
 function open_git {
     git branch >/dev/null 2>/dev/null && echo "├─┤" && return
@@ -36,7 +37,7 @@ function open_git {
 # The actual prompt.
 PROMPT='
 %{$ZEPHYR_PRE%}┌─┬─┤%{$reset_color%}%{$fg[blue]%}$(collapse_pwd)%{$ZEPHYR_PRE%}$(open_git)%{$reset_color%}$(git_prompt_info)%{$ZEPHYR_PRE%}$(close_git)%{$reset_color%}
-│$(vi_prompt)│
+$(close_git)$(vi_prompt)$(close_git)
 $(prompt_char) '
 RPROMPT='%{$ZEPHYR_PRE%}%T%{$reset_color%}'
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[magenta]%}"

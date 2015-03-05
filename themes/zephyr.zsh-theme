@@ -43,4 +43,4 @@ RPROMPT='%{$ZEPHYR_PRE%}%T%{$reset_color%}'
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[magenta]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$ZEPHYR_PRE%} *%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$ZEPHYR_PRE%}%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$ZEPHYR_PRE%} %{$reset_color%}"

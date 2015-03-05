@@ -36,11 +36,11 @@ function open_git {
 
 # The actual prompt.
 PROMPT='
-%{$ZEPHYR_PRE%}┌─┬─┤%{$reset_color%}%{$fg[blue]%}$(collapse_pwd)%{$reset_color%}%{$ZEPHYR_PRE%}$(open_git)%{$reset_color%}$(git_prompt_info)%{$ZEPHYR_PRE%}$(close_git)%{$reset_color%}
+%{$ZEPHYR_PRE%}┌─┬─┤%{$reset_color%}%{$fg[blue]%}$(collapse_pwd)%{$reset_color%}%{$ZEPHYR_PRE%}$(open_git)%{$reset_color%} $(git_prompt_info)%{$ZEPHYR_PRE%}$(close_git)%{$reset_color%}
 $(close_git)$(vi_prompt)$(close_git)
 $(prompt_char) '
 RPROMPT='%{$ZEPHYR_PRE%}%T%{$reset_color%}'
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[magenta]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$ZEPHYR_PRE%}*%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$ZEPHYR_PRE%} *%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$ZEPHYR_PRE%}%{$reset_color%}"

@@ -12,23 +12,23 @@ function collapse_pwd {
 # Changes pre based on whether we're in a vi subprompt
 function zephyr_pre {
   if [ -n "$MYVIMRC" ]; then
-    echo -n "%{$fg[cyan]%}"
+    echo -n "%{$fg[blue]%}"
   else
-    echo -n "%{$fg[black]%}"
+    echo -n "%{$fg[gray]%}"
   fi
 }
 function zephyr_txt {
   if [ -n "$MYVIMRC" ]; then
-    echo -n "%{$fg[gray]%}"
+    echo -n "%{$fg[cyan]%}"
   else
-    echo -n "%{$fg[blue]%}"
+    echo -n "%{$fg[red]%}"
   fi
 }
 function zephyr_git {
   if [ -n "$MYVIMRC" ]; then
-    echo -n "%{$fg[red]%}"
+    echo -n "%{$fg[white]%}"
   else
-    echo -n "%{$fg[magenta]%}"
+    echo -n "%{$fg[white]%}"
   fi
 }
 ZEPHYR_PRE="$(zephyr_pre)"

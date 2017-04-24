@@ -14,21 +14,21 @@ function zephyr_pre {
   if [ -n "$MYVIMRC" ]; then
     echo -n "%{$fg[blue]%}"
   else
-    echo -n "%{$fg[gray]%}"
+    echo -n "%{$fg[black]%}"
   fi
 }
 function zephyr_txt {
   if [ -n "$MYVIMRC" ]; then
     echo -n "%{$fg[cyan]%}"
   else
-    echo -n "%{$fg[red]%}"
+    echo -n "%{$fg[green]%}"
   fi
 }
 function zephyr_git {
   if [ -n "$MYVIMRC" ]; then
-    echo -n "%{$fg[white]%}"
+    echo -n "%{$fg[red]%}"
   else
-    echo -n "%{$fg[white]%}"
+    echo -n "%{$fg[red]%}"
   fi
 }
 ZEPHYR_PRE="$(zephyr_pre)"
